@@ -8,8 +8,8 @@
             //Konyves();
             //Filmes();
             //Jatekkarakterek();
-            Urhajozas();
-            
+            //Urhajozas();
+            Kemkedes();
 
             
         }
@@ -66,6 +66,20 @@
             Console.WriteLine(urhajo1.ToString() + "\n" + urhajo2.ToString());
             Console.WriteLine();
             Console.WriteLine(urhajo2.ToString() + "\n az indulás után " + urhajo2.Indulas() + ",tankolás után:" + urhajo2.Tankolas(20) +", landoláskor ekkora a sebessége: " + urhajo2.Landolas());
+        }
+
+        static void Kemkedes()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Kémküldetés");
+            KemKuldetes kem1 = new("SlimSloth", "Magyaroszág", 60, 40);
+            Console.WriteLine(kem1.ToString() );
+            kem1.SikerEselyNovelese(30);
+            KemKuldetes kem2 = new("SadFish", "Horvátország");
+            Console.WriteLine($"{kem1.Kodnev} esélye, miután növekedett: {kem1.SikerEsely}");
+            Console.WriteLine();
+            Console.WriteLine(kem2.ToString());
+            Console.WriteLine("Elindult-e a küldetés?" + kem2.KuldetesInditasa() + kem2.ToString() + "\n ekkora lett a veszélyszintje " + kem2.VeszelySzintNovelese(20)  +"%" );
         }
 
     }
