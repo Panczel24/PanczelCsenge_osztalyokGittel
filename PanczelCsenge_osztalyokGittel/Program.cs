@@ -7,8 +7,8 @@
 
             //Konyves();
             //Filmes();
-            Jatekkarakterek();
-
+            //Jatekkarakterek();
+            Urhajozas();
             
 
             
@@ -55,6 +55,17 @@
             Console.WriteLine("\n" + karakter1.ToString() + "\n" + karakter1.Tamadas() + ",ennyi életereje van:" + karakter1.Gyogyulas(20));
             Console.WriteLine(karakter1.Nev + "," + karakter1.Szintlepes());
 
+        }
+
+        static void Urhajozas()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Űrhajózás");
+            Urhajo urhajo1 = new("Comet", 50, 6, 70);
+            Urhajo urhajo2 = new("Star", 10);
+            Console.WriteLine(urhajo1.ToString() + "\n" + urhajo2.ToString());
+            Console.WriteLine();
+            Console.WriteLine(urhajo2.ToString() + "\n az indulás után " + urhajo2.Indulas() + ",tankolás után:" + urhajo2.Tankolas(20) +", landoláskor ekkora a sebessége: " + urhajo2.Landolas());
         }
 
     }
